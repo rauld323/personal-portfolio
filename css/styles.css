@@ -1,0 +1,510 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+    /*background-color: aqua;*/
+}
+nav {
+    padding: 5px 20px;
+    background: transparent;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+.logo a:hover {
+    text-decoration: none;
+}
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+.logo a,
+.toggle a {
+    font-size: 20px;
+}
+
+img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle {
+    order: 1;
+    height: 100px;
+}
+.toggle a:hover{
+    color: black;
+}
+/* Navbar Starts here*/
+/* Style the navbar */
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+navbar ul {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+/* Navbar Starts here*/
+
+/* Button Starts Here */
+.item {
+    width: 100%;
+    border: none;
+    order: 2;
+    display: none;
+    text-align: center;
+    position: relative;
+    padding: 0.5em 2.2em;
+    font-size: 25px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    color: black;
+    overflow: hidden;
+    margin-bottom:5px; 
+}
+.item span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 5px solid royalblue;
+}
+.item span::before{
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-60deg);
+}
+.item:hover span::before, .item:focus span::before{
+    transform: translate(-50%,-50%) rotate(-60deg);
+    width: 100%;
+    transition: all .3s;
+    background: royalblue; 
+}
+/* Button Design Ends*/
+
+/* Intro Section */
+.item.active {
+    display: block;
+}
+.intro{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.sec-1{
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.personal-pic{
+    height: 300px;
+    width: 300px;
+}
+.sec-2{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+}
+/* End of Intro Section */
+
+/* Technologies Section*/
+.tech{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 90%;
+}
+.tech-section{
+    justify-content: center;
+    height: 400px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+    justify-content: center;
+    position: relative;
+    margin-left:5%; 
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    border: dotted 1px black;
+}
+.tech-header{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+  
+}
+.tech-sections{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+.tech-1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+.tech-2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+
+/* Project Section Starts*/
+.projects{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 90%;
+}
+.projects-section{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.projects-header{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.proj-1{
+    height: 300px;
+    width: 100%;
+    border: dotted black 1px;
+    margin-bottom: 20px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    position: relative;
+    background-image: url(/img/download.jpg)
+}
+.proj-2{
+    height: 300px;
+    width: 100%;
+    border: dotted black 1px;
+    margin-bottom: 20px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    position: relative;
+    background-image: url(/img/download.jpg)
+}
+.prog-pic {
+  width: 100%!;
+}
+.overlay {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: .7;
+  background-color: purple;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: .8s ease;
+}
+.proj-1:hover .overlay , .proj-2:hover .overlay, .proj-3:hover .overlay, .proj-4:hover .overlay{
+  transform: scale(1);
+  -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.proj-btn{
+  font-size: 20px;
+  color: white;
+  background: purple;
+  width: 30%;
+  position: absolute;
+  top: 60%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+.proj-btn-2{
+    font-size: 20px;
+  color: white;
+  background: purple;
+  width: 30%;
+  position: absolute;
+  top: 60%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.proj-3{
+     height: 300px;
+    width: 100%;
+    border: dotted black 1px;
+    margin-bottom: 20px;
+     -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background-image: url(/img/download.jpg)
+}.proj-4{
+     height: 300px;
+    width: 100%;
+    border: dotted black 1px;
+    margin-bottom: 20px;
+     -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background-image: url(/img/download.jpg)
+}
+/*End of Project Section*/
+
+/*Start of Contact Form*/
+form{
+     width: 90%;
+     display: flex;
+     flex: row wrap;
+     justify-content: center;
+     
+}
+fieldset{
+    border-style: none;
+}
+.contact-form{
+    display: flex;
+    flex-flow: row wrap;
+}
+.fly-email{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    border-style: none;
+    margin: 15px 0;
+}
+.fly-email img{
+    width: 75%;
+    height: 75%;
+}
+.form-section{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    border-style: none;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+.form-section input, button{
+    width: 90%;
+    height: 30px;
+}
+.form-section button{
+    margin-top: 15px;
+    width: 30%;
+    height: 30px;
+    background-color: purple;
+    color: white;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+/*End of Contact Form*/
+
+/* Start of Footer Section*/
+.footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    height: 65px;
+    width: 100%;
+    margin-top: 30px;
+}
+.footer-sec-1{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+}
+.footer-sec-2{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-size: 10px;
+}
+/* End of Footer Section*/
+
+
+
+
+@media all and (min-width: 600px) {
+    .menu {
+        justify-content: center;
+    }
+    .logo {
+        flex: 1;
+    }
+    .toggle {
+        flex: 1;
+        text-align: right;
+    }
+    .toggle {
+        order: 1;
+    }
+    .sec-1{
+        width: 48%;
+    }
+    .sec-2{
+        width: 48%;
+        height: 100%;
+    }
+    .tech-1{
+    width: 50%;
+    }
+    .tech-2{
+        width: 50%;
+    }
+    .proj-1{
+        width: 44%;
+        margin-right: 11px;
+    }
+    .proj-2{
+        width: 44%;
+        margin-left: 11px;
+    }
+    .proj-3{
+        width: 44%;
+        margin-right: 11px;
+        
+    }
+    .proj-4{
+        width: 44%;
+        margin-left: 3px;
+        margin-left: 11px;
+    }
+    .fly-email{
+        width: 50%;
+    }
+    .form-section{
+        width: 50%;
+    }
+}
+
+@media all and (min-width: 900px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+    .toggle {
+        display: none;
+    }
+    .logo {
+        order: 0;
+    }
+    .item {
+        order: 1;
+        margin-left: 10px;
+        width: 150px;
+    }
+    .item span:hover{
+        text-decoration: none;
+        color: white;
+        
+    }
+    .menu li {
+        padding: 15px 10px;
+    }
+    .sec-1{
+        width: 48%;
+    }
+    .sec-2{
+        width: 48%;
+        height: 100%;
+    }
+    .form-section{
+        width: 30%;
+    }
+}
