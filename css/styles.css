@@ -243,7 +243,9 @@ navbar ul {
     -moz-border-radius: 30px;
     border-radius: 30px;
     position: relative;
-    background-image: url(/img/download.jpg)
+    background-image: url(/img/addressBook.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .proj-2{
     height: 300px;
@@ -352,6 +354,7 @@ fieldset{
 .contact-form{
     display: flex;
     flex-flow: row wrap;
+    margin-bottom: 15px;
 }
 .fly-email{
     width: 100%;
@@ -363,7 +366,7 @@ fieldset{
 }
 .fly-email img{
     width: 75%;
-    height: 75%;
+    height: 85%;
 }
 .form-section{
     width: 100%;
@@ -381,7 +384,6 @@ fieldset{
     height: 30px;
 }
 .form-section button{
-    margin-top: 15px;
     width: 30%;
     height: 30px;
     background-color: purple;
